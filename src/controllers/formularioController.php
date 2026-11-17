@@ -1,8 +1,8 @@
 <?php
 
 
-include_once('../Model/Database.php');
-include_once('../Model/UsuarioModel.php');
+include_once(__DIR__ . '/../models/Database.php');
+include_once(__DIR__ . '/../models/usuarioModel.php');
 
 
 // Criar uma instância de Database para obter a conexão
@@ -51,7 +51,7 @@ class FormularioController {
                 $result = $this->usuarioModel->updateUsuario($idUsuario, $login, $senha, $idFunc, $idPessoa, $nivel_priv, $ativo);
 
                 if ($result) {
-                    header('Location: ../Controller/sistemaController.php');
+                    header('Location: ../controllers/sistemaController.php');
                     exit();
                 } else {
                     echo "Erro ao atualizar usuário";
@@ -69,7 +69,7 @@ class FormularioController {
         $result = $this->usuarioModel->cadastrarUsuario($login, $senha, $idFunc, $idPessoa, $nivel_priv, $ativo);
 
         if ($result) {
-            header('Location: ../Controller/sistemaController.php');
+            header('Location: ../controllers/sistemaController.php');
             exit();
         } else {
             echo "Erro ao cadastrar usuário";
@@ -80,7 +80,7 @@ class FormularioController {
         $usuario = $this->usuarioModel->getUsuarioById($id);
 
         if (!$usuario) {
-            header('Location: ../Controller/sistemaController.php');
+            header('Location: ../controllers/sistemaController.php');
             exit();
         }
 
@@ -88,6 +88,6 @@ class FormularioController {
 
     }
 }   
-     include('../View/formularioUsuarioView.php');
+     include(__DIR__ . '/../views/formularioUsuarioView.php');
         exit();
 ?>

@@ -1,6 +1,6 @@
 <?php
-include_once('../Model/Database.php');
-include_once('../Model/ReservaModel.php');
+include_once(__DIR__ . '/../models/Database.php');
+include_once(__DIR__ . '/../models/ReservaModel.php');
 
 
 $database = new Database();
@@ -23,14 +23,14 @@ if (isset($_POST['submit'])) {
     $result = $reservaModel->cadastrarReserva($dataReserva, $idPessoa, $idLivro, $dataLimite);
 
     if ($result) {
-        header('Location: ../Controller/ReservaController.php');
+        header('Location: ../controllers/reservaController.php');
         exit();
     } else {
-        header('Location: ../Controller/indexController.php');
+        header('Location: ../controllers/indexController.php');
         exit();
     }
 }
 
 // Se o formulário não foi submetido, inclui a view
-include('../View/formularioReservaView.php');
+include(__DIR__ . '/../views/formularioReservaView.php');
 ?>

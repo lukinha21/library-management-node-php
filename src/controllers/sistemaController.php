@@ -1,7 +1,7 @@
 <?php
-include_once('../Model/sistemaModel.php');
-include_once('../Model/Database.php');
-include_once('../Controller/UsuarioController.php'); // Certifique-se de incluir o arquivo do controlador
+include_once(__DIR__ . '/../models/sistemaModel.php');
+include_once(__DIR__ . '/../models/Database.php');
+include_once(__DIR__ . '/../controllers/usuarioController.php'); // Certifique-se de incluir o arquivo do controlador
 
 
 
@@ -24,7 +24,7 @@ if ($result === false) {
     echo "Erro na consulta de usuários.";
 } else {
     // A consulta foi bem-sucedida, inclua a view
-    include_once('../View/SistemaView.php');
+    include_once(__DIR__ . '/../views/sistemaView.php');
 }
 
 // Adicione estas linhas
@@ -45,6 +45,6 @@ if ($result === false) {
     echo "Erro na consulta de usuários.";
 } else {
     // A consulta foi bem-sucedida, inclua a view
-    include_once('../View/SistemaView.php');
+    include_once(__DIR__ . '/../views/sistemaView.php');
 }
 ?>

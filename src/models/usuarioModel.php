@@ -1,7 +1,7 @@
 <?php
-include_once('../View/UsuarioView.php');
-include_once('../Model/Database.php');
-include_once('../Model/UsuarioModel.php');
+include_once(__DIR__ . '/../views/UsuarioView.php');
+include_once(__DIR__ . '/../models/Database.php');
+include_once(__DIR__ . '/../models/usuarioModel.php');
 
 
 

@@ -80,9 +80,9 @@
     </style>
 </head>
 <body>
-    <a href="../Controller/indexController.php">Voltar</a>
+    <a href="../controllers/indexController.php">Voltar</a>
     <div class="box">
-        <form action="../Controller/reservaController.php" method="POST">
+        <form action="../controllers/reservaController.php" method="POST">
             <fieldset>
                 <legend><b>Fórmulário para Reserva</b></legend>
                 <br>

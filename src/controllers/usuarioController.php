@@ -1,6 +1,6 @@
 <?php
-include_once('../Model/Database.php');
-include_once('../Model/UsuarioModel.php');
+include_once(__DIR__ . '/../models/Database.php');
+include_once(__DIR__ . '/../models/usuarioModel.php');
 
 $db = new Database(); // Agora a classe Database tem um método getConnection()
 $usuarioModel = new UsuarioModel($db->getConnection()); // Certifique-se de passar a conexão corretamente
@@ -18,18 +18,18 @@ if (!empty($_GET['id']) && !empty($_GET['action'])) {
         $usuario = $usuarioModel->getUsuarioById($id);
 
         if (!$usuario) {
-            header('Location: ../View/sistemaView.php');
+            header('Location: ../views/sistemaView.php');
             exit();
         }
 
-        include('../View/formularioUsuarioView.php');
+        include(__DIR__ . '/../views/formularioUsuarioView.php');
         exit();
     } elseif ($action === 'delete') {
         // Ação de exclusão
         $resultDelete = $usuarioModel->excluirUsuario($id);
 
         if ($resultDelete) {
-            header('Location: ../Controller/sistemaController.php');
+            header('Location: ../controllers/sistemaController.php');
             exit();
         } else {
             echo "Erro ao excluir usuário";
@@ -57,7 +57,7 @@ class UsuarioController {
     public function excluirUsuario($id) {
         
         $this->usuarioModel->excluirUsuario($id);
-            header('Location: ../View/sistemaView.php');
+            header('Location: ../views/sistemaView.php');
             exit();
 
         }
@@ -67,11 +67,11 @@ class UsuarioController {
         $usuario = $this->usuarioModel->getUsuarioById($id);
 
         if (!$usuario) {
-            header('Location: ../View/sistemaView.php');
+            header('Location: ../views/sistemaView.php');
             exit();
         }
 
-        include('../View/formularioUsuarioView.php');
+        include(__DIR__ . '/../views/formularioUsuarioView.php');
         exit();
     }
 
@@ -79,11 +79,11 @@ class UsuarioController {
         $result = $this->usuarioModel->updateUsuario($id, $login, $senha, $idFunc, $idPessoa, $nivel_priv, $ativo);
 
         if ($result) {
-            header('Location: ../View/sistemaView.php');
+            header('Location: ../views/sistemaView.php');
             exit();
         } else {
             // Lógica de tratamento de erro, se necessário
-            header('Location: ../View/sistemaView.php');
+            header('Location: ../views/sistemaView.php');
             echo "Erro ao atualizar usuário";
             exit();
         }

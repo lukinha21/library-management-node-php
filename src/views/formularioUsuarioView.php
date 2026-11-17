@@ -80,9 +80,9 @@
     </style>
 </head>
 <body>
-    <a href="../Controller/sistemaController.php">Voltar</a>
+    <a href="../controllers/sistemaController.php">Voltar</a>
     <div class="box">
-        <form action="../Controller/formularioController.php" method="POST">
+        <form action="../controllers/formularioController.php" method="POST">
             <input type="hidden" name="idUsuario" value="<?php echo isset($usuario['idUsuario']) ? $usuario['idUsuario'] : ''; ?>">
             <fieldset>
                 <legend><b>Fórmulário de Usuarios</b></legend>

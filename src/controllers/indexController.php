@@ -1,12 +1,12 @@
 <?php
-include_once(__DIR__ . '/../Model/userModel.php');
+include_once(__DIR__ . '/../models/userModel.php');
 session_start();
 $userModel = new UserModel();
 if (!$userModel->isLoggedIn()) {
-    header('Location: ..\View\loginView.php');
+    header('Location: ../views/loginView.php');
     exit();
 }
-header('Location: ../View/indexView.php');
+header('Location: ../views/indexView.php');
 exit();
 
 ?>

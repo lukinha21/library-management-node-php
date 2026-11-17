@@ -45,7 +45,7 @@
 <body>
     <div>
         <h1>Login</h1>
-        <form action="..\Controller\loginController.php" method="POST">
+        <form action="../controllers/loginController.php" method="POST">
             <input type="text" name="login" placeholder="Nome*">
             <br><br>
             <input type="password" name="senha" placeholder="Senha*">

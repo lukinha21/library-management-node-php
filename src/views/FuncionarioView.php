@@ -31,9 +31,9 @@
 	<div id="wrapper">
 		<!-- Header -->
 		<header id="header-inicio" class="alt">
-			<span class="logo"><a href="../Controller/indexController.php"><img src="../images/logo.png" alt="" /></a></span>
+			<span class="logo"><a href="../controllers/indexController.php"><img src="../images/logo.png" alt="" /></a></span>
 			<div class="sair">
-				<a href="../Controller/sairController.php"> Sair<i id="botao-sair" class="material-symbols-outlined"><span
+				<a href="../controllers/SairController.php"> Sair<i id="botao-sair" class="material-symbols-outlined"><span
 							class="material-symbols-outlined">logout</i></a>
 			</div>
 		</header>
@@ -79,7 +79,7 @@
 							class="material-symbols-outlined">keyboard_return</i>Devolução</a>
 			</div>
 			<div class="Navbar__Link">
-				<a href="../Controller/reservaController.php"><i id="botao-menu" class="material-symbols-outlined"><span
+				<a href="../controllers/reservaController.php"><i id="botao-menu" class="material-symbols-outlined"><span
 								class="material-symbols-outlined">access_time</i>Reservar</a>
 			</div>
 			<div class="Navbar__Link">
