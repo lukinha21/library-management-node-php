@@ -96,7 +96,7 @@
                     <select name="Leitor_Pessoa_idPessoa" id="Leitor_Pessoa_idPessoa" required>
                         <?php
                             foreach ($leitores as $leitor) {
-                                echo "<option value='{$leitor['idLeitor']}'>{$leitor['nome']}</option>";
+                                echo "<option value='{$leitor['Pessoa_idPessoa']}'>{$leitor['nome']}</option>";
                             }
                         ?>
                     </select>
